@@ -3,8 +3,12 @@
 from masoniteorm.models import Model
 from masoniteorm.relationships import belongs_to
 
+from app.observers import ApplicationObserver
 
-class ApplicationRelations:
+
+class Application(Model):
+    """Application Model"""
+
     @belongs_to
     def customer(self):
         from app.models import Customer
@@ -20,9 +24,6 @@ class ApplicationRelations:
         from app.models import Status
         return Status
 
-
-class ApplicationProperties:
-
     @property
     def readable_gender(self):
         switcher = {
@@ -36,9 +37,6 @@ class ApplicationProperties:
     def is_latest(self):
         return False
 
-
-class ApplicationAction:
-
     def sync_to_customer(self):
         """
 
@@ -49,11 +47,4 @@ class ApplicationAction:
         return customer.save()
 
 
-class Application(
-    Model,
-    ApplicationRelations,
-    ApplicationProperties,
-):
-    """Application Model"""
-    pass
-
+Application.observe(ApplicationObserver())

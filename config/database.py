@@ -7,7 +7,7 @@ DATABASES = {
     "host": "127.0.0.1",
     "driver": "postgres",
     "database": "underwriting",
-    "user": "postgres",
+    "user": "ops_server",
     "password": "password",
     "port": 5432,
     "log_queries": False,

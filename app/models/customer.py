@@ -17,4 +17,9 @@ class Customer(User):
     def full_name(self):
         return "%s %s" % (self.first_name, self.last_name)
 
+    # @property
+    # def product_line(self):
+    #     Check has paid loan
+        # self.loans().where()
+
 

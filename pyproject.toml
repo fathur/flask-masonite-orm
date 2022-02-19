@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "julo-underwriting"
+version = "0.1.0"
+description = "Julo Underwriting Microservice"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.0.3"
+masonite-orm = "^2.3.0"
+python-dotenv = "^0.19.2"
+psycopg2 = "^2.9.3"
+argon2-cffi = "^21.3.0"
+
+[tool.poetry.dev-dependencies]
+pdoc = "^10.0.1"
+pytest = "^7.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
