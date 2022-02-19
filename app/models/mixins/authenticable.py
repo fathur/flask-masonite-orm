@@ -1,0 +1,2 @@
+class Authenticable:
+    pass
