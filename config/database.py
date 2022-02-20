@@ -1,20 +1,21 @@
 from masoniteorm.connections import ConnectionResolver
+import os
 
 DATABASES = {
-  "default": "postgres",
+    "default": "postgres",
 
-  "postgres": {
-    "host": "127.0.0.1",
-    "driver": "postgres",
-    "database": "underwriting",
-    "user": "ops_server",
-    "password": "password",
-    "port": 5432,
-    "log_queries": False,
-    "options": {
-      #
-    }
-  },
+    "postgres": {
+        "host": os.environ.get('DB_HOST'),  # "127.0.0.1",
+        "driver": "postgres",
+        "database": os.environ.get('DB_NAME'),  # "underwriting",
+        "user": os.environ.get('DB_USER'),  # "ops_server",
+        "password": os.environ.get('DB_PASSWORD'),  # "password",
+        "port": os.environ.get('DB_PORT'),  # 5432,
+        "log_queries": os.environ.get('DEBUG'),  # False,
+        "options": {
+            #
+        }
+    },
 
 }
 

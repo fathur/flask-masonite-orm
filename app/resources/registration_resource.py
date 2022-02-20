@@ -1,0 +1,16 @@
+from flask_restful import Resource, fields
+
+from app.resources import application_fields
+from app.services.resource_fields import Nested
+from app.services.response import ok
+
+customer_fields = {
+    'id': fields.Integer,
+}
+
+
+class RegistrationResource(Resource):
+    def post(self, customer_id):
+        from app.models import Customer
+        customer = Customer.with_('applications').find(customer_id)
+        return ok(data=customer, field=customer_fields)

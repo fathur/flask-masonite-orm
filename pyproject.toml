@@ -2,7 +2,7 @@
 name = "julo-underwriting"
 version = "0.1.0"
 description = "Julo Underwriting Microservice"
-authors = ["Your Name <you@example.com>"]
+authors = ["Fathur Rohman <fathur@julo.co.id>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -11,6 +11,7 @@ masonite-orm = "^2.3.0"
 python-dotenv = "^0.19.2"
 psycopg2 = "^2.9.3"
 argon2-cffi = "^21.3.0"
+Flask-RESTful = "^0.3.9"
 
 [tool.poetry.dev-dependencies]
 pdoc = "^10.0.1"
