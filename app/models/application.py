@@ -46,5 +46,11 @@ class Application(Model):
         # todo some sync data process
         return customer.save()
 
+    def has_good_payment_history(self):
+        return True
+
+    def is_paid_on_time(self):
+        return False
+
 
 Application.observe(ApplicationObserver())
