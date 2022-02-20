@@ -1,8 +1,8 @@
 from flask_restful import Resource, fields
 
 from app.resources import application_fields
-from app.services.resource_fields import Nested
-from app.services.response import ok
+from app.services import Nested
+from app.services import ok
 
 customer_fields = {
     'id': fields.Integer,

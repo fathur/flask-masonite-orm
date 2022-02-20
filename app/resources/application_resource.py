@@ -1,6 +1,6 @@
 from flask_restful import Resource, fields
 
-from app.services.response import success
+from app.services import success
 
 application_fields = {
     'id': fields.Integer,

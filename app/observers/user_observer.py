@@ -18,7 +18,7 @@ class UserObserver:
         Args:
             user (masoniteorm.models.Model): User model.
         """
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(user, event=event)
@@ -55,7 +55,7 @@ class UserObserver:
         Args:
             user (masoniteorm.models.Model): User model.
         """
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(user, event=event)
@@ -106,7 +106,7 @@ class UserObserver:
         Args:
             user (masoniteorm.models.Model): User model.
         """
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(user, event=event)

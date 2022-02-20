@@ -19,7 +19,7 @@ class ApplicationObserver:
             application (masoniteorm.models.Model): Application model.
         """
 
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(application, event)
@@ -55,7 +55,7 @@ class ApplicationObserver:
         Args:
             application (masoniteorm.models.Model): Application model.
         """
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(application, event)
@@ -106,7 +106,7 @@ class ApplicationObserver:
         Args:
             application (masoniteorm.models.Model): Application model.
         """
-        from app.models.audit_log import AuditLog
+        from app.models import AuditLog
 
         event = inspect.currentframe().f_code.co_name
         AuditLog.audit_model(application, event)
